@@ -29,6 +29,8 @@ A Perplexity-style search engine powered by Google's Gemini 2.0 Flash model with
 - Node.js (v18 or higher recommended)
 - npm or yarn
 - A Google API key with access to Gemini API
+- Java 17 (for the Java backend)
+- Maven (for the Java backend)
 
 ### Installation
 
@@ -54,13 +56,19 @@ A Perplexity-style search engine powered by Google's Gemini 2.0 Flash model with
 4. Start the development server:
 
    ```bash
+   # Terminal 1 (Java backend)
+   npm run dev:java
+
+   # Terminal 2 (Vite frontend)
    npm run dev
    ```
 
 5. Open your browser and navigate to:
    ```
-   http://localhost:3000
+   http://localhost:5173
    ```
+
+The frontend proxies `/api/*` requests to the Java backend on `http://localhost:8080`.
 
 ## Environment Variables
 
@@ -69,9 +77,11 @@ A Perplexity-style search engine powered by Google's Gemini 2.0 Flash model with
 
 ## Development
 
-- `npm run dev`: Start the development server
-- `npm run build`: Build for production
-- `npm run start`: Run the production server
+- `npm run dev`: Start the Vite frontend
+- `npm run dev:java`: Start the Java (Spring Boot) backend
+- `npm run dev:node`: Start the legacy Node/Express backend (not used after migration)
+- `npm run build`: Build the frontend for production
+- `npm run start`: Start the Java backend (Spring Boot)
 - `npm run check`: Run TypeScript type checking
 
 ## Security Notes
