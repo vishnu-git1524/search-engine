@@ -32,7 +32,7 @@ A Perplexity-style search engine powered by Google's Gemini 2.0 Flash model with
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ammaarreshi/Gemini-Search.git
+   git clone https://github.com/vishnu-git1524/search-engine
    cd Gemini-Search
    ```
 
